@@ -7,6 +7,7 @@ public class PlayerController1 : MonoBehaviour {
 	public float jumpSpeed = 8.0F;
 	public float gravity = 20.0F;
 	private Vector3 moveDirection = Vector3.zero;
+
 	void Update() {
 		CharacterController controller = GetComponent<CharacterController>();
 		if (controller.isGrounded) {
