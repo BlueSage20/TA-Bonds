@@ -1,0 +1,26 @@
+art:
+- new textures for the players
+- concept for obstacle
+- mash up for obstacles
+- concept for platform
+- mash up for platforms
+- concept for buff
+- mash up for buffs
+- concept for the background
+- mash up for background
+
+coding:
+- implement platforms
+- implement buffs
+- implement ui
+(- implement gravitational pull)
+(- implement alterated level mechanics)
+(- design a cluster-based or randomized level system)
+
+game design:
+- decide for mechanics to force users to seperate
+- playtest
+- balancing: distance debuff, distance buff, numbers for buffs, numbers for damage, speed of the falling obstacles etc, height of jumps, lenght of jumps, size of obstacles, buffs, platforms
+- level design
+- discuss about mechanic alterations
+- write interface design document
