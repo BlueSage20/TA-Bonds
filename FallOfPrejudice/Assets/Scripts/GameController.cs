@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour {
 		restart = false;
 		restartText.text = "";
 		gameOverText.text = "";
-		StartCoroutine (SpawnWaves ());
+		//StartCoroutine (SpawnWaves ());
 	}
 	
 	void Update()
@@ -35,7 +35,8 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
-	
+
+	/*
 	IEnumerator SpawnWaves ()
 	{
 		yield return new WaitForSeconds (startWait);
@@ -56,7 +57,7 @@ public class GameController : MonoBehaviour {
 				break;
 			}
 		}
-	}
+	}*/
 	
 	public void GameOver ()
 	{
