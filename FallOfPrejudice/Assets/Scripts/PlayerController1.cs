@@ -16,9 +16,15 @@ public class PlayerController1 : MonoBehaviour {
 			moveDirection *= speed;
 			if (Input.GetButton("Jump1"))
 				moveDirection.y = jumpSpeed;
-			
 		}
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	void OnTriggerEnter(Collider otherObject)
+	{
+		if (otherObject.tag == "Obstacle") {
+			Destroy (gameObject);		
+		}
+}
 }
