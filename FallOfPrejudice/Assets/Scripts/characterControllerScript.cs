@@ -42,7 +42,7 @@ public class characterControllerScript : MonoBehaviour {
 
 	void Update()
 	{
-		if((grounded) && Input.GetKeyDown(KeyCode.LeftControl))
+		if((grounded) && Input.GetKeyDown(KeyCode.W))
 		{
 			anim.SetBool("ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));

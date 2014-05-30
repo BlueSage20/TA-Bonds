@@ -42,7 +42,7 @@ public class characterControllerScriptPlayer2 : MonoBehaviour {
 
 	void Update()
 	{
-		if((grounded) && Input.GetKeyDown(KeyCode.Space))
+		if((grounded) && Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			anim.SetBool("ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
