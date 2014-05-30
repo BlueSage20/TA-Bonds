@@ -1,0 +1,11 @@
+Sounds
+Jumping: 
+Landing: decending tone
+Collecting Buff: bubbles_small01, bubbles_small02
+Getting hit: bubble_burst02, bubble_burst06, bubble_close02, bubble_close03
+Merging of the bubbles: waves_submerged_08, waves_submerged_03
+Seperation of the bubbles: splash_large04, splash_large02
+Ambient noise: Output 1-3, Output 1-9, Output 1-10
+Danger running out of points: ambient_one_four, ambient_three
+Credits screen / game over: excited, relaxed
+Menue: excited, relaxed
