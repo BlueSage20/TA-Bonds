@@ -48,9 +48,7 @@ public class GameController : MonoBehaviour {
 				Instantiate (hazard, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds (spawnWait);
 			}
-			hazardCount += 1;
-			yield return new WaitForSeconds (waveWait);
-			
+
 			if(gameOver)
 			{
 				restartText.text = "Press 'R' to Restart";
