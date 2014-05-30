@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bubble.cs" />
+     <Compile Include="Assets\Scripts\Buff.cs" />
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
      <Compile Include="Assets\Scripts\GUITest.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
+     <Compile Include="Assets\Scripts\Plattform.cs" />
      <Compile Include="Assets\Scripts\PlayerController1.cs" />
      <Compile Include="Assets\Scripts\PlayerController1_alternative.cs" />
      <Compile Include="Assets\Scripts\PlayerController2.cs" />
