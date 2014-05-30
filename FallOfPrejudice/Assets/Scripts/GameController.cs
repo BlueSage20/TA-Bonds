@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour {
 		//StartCoroutine (SpawnWaves ());
 	}
 	
-	void Update()
+	void FixedUpdate()
 	{
 		if (restart) 
 		{
@@ -34,8 +34,13 @@ public class GameController : MonoBehaviour {
 				Application.LoadLevel(Application.loadedLevel);
 			}
 		}
+		if(gameOver)
+		{
+			restartText.text = "Press 'R' to Restart";
+			restart = true;
+		}
 	}
-
+	
 	/*
 	IEnumerator SpawnWaves ()
 	{

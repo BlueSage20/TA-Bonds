@@ -7,7 +7,7 @@ public class Buff : MonoBehaviour {
 	public float healthGain;
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		float amtToMove = currentSpeed * Time.deltaTime;
 		transform.Translate (Vector3.down * amtToMove);
 	}
