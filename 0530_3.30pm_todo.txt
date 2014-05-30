@@ -10,6 +10,9 @@ art:
 - mash up for background
 
 coding:
+- implement bubble merge
+- implement bubble regeneration during "bubble_team" state
+- implement a rudimental ui hub to see the numbers of the health pools
 - implement platforms
 - implement buffs
 - implement ui
