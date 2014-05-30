@@ -1,11 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyByContact : MonoBehaviour {
-	void Update()
+public class DestroyByContact : MonoBehaviour 
+{
+	void Start ()
 	{
-		if (transform.position.y <= -3) {
-			Destroy(gameObject);		
+	}
+	
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.gameObject.tag == "Player") {
+			Destroy (gameObject);
+			col.gameObject.GetComponentInChildren<Bubble>().health -= 20;
+		} else if (col.gameObject.tag == "Ground") {
+			Destroy (gameObject);
 		}
 	}
 }

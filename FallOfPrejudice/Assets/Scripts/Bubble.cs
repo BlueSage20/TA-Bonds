@@ -3,26 +3,37 @@ using System.Collections;
 
 public class Bubble : MonoBehaviour {
 
-	public float health;
+	public float health = 100f;
 	public GameObject player;
-
-	float distanceBetweenPlayers = 0;
+	public GameObject target;
+	
+	public float distanceBetweenPlayers;
 
 	public GameController gameController;
 
-	// Use this for initialization
-	void Start () {
-	}
 	
 	// Update is called once per frame
 	void Update () {
-		health = light.spotAngle;
-		if (distanceBetweenPlayers == 0) {
-						light.spotAngle -= 0.1f;
+		distanceBetweenPlayers = Vector3.Distance(player.transform.position, target.transform.position);
+		if (distanceBetweenPlayers >= 5) {
+					health -= 0.05f;
 				}
-		if (health <= 50) {
+		if (distanceBetweenPlayers <= 5) {
+			health += 0.05f;	
+		}
+		if (health <= 0 && gameObject != null) {
+			Debug.Log (health);
 			Destroy (player);
 			gameController.GameOver ();
 		}
+		light.spotAngle = health / 2 + 50f;
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Obstacle") {
+			health -= 20;		
+		}
+						
 	}
 }

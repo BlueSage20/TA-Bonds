@@ -5,8 +5,6 @@ public class Obstacle : MonoBehaviour {
 	
 	public float MinSpeed;
 	public float MaxSpeed;
-
-	public float obstacleA_damage;
 	
 	private float currentSpeed;
 	private float x, y, z;
@@ -28,7 +26,6 @@ public class Obstacle : MonoBehaviour {
 		x = Random.Range (-7f, 7f);
 		y = 7.0f;
 		z = 0.0f;
-		
 		transform.position = new Vector3 (x, y, z);
 	}
 }
