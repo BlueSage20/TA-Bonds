@@ -46,12 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Bubble1.cs" />
-     <Compile Include="Assets\Scripts\Bubble2.cs" />
-     <Compile Include="Assets\Scripts\DestroyByGround.cs" />
+     <Compile Include="Assets\Scripts\Bubble.cs" />
+     <Compile Include="Assets\Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\Scripts\GUITest.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\PlayerController1.cs" />
+     <Compile Include="Assets\Scripts\PlayerController1_alternative.cs" />
      <Compile Include="Assets\Scripts\PlayerController2.cs" />
+     <Compile Include="Assets\Scripts\PlayerController2_alternative.cs" />
+     <Compile Include="Assets\Scripts\characterControllerScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
