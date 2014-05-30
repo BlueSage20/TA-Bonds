@@ -9,7 +9,7 @@ public class characterControllerScriptPlayer2 : MonoBehaviour {
 	public float jumpForce = 700f;
 
 	private bool facingRight = true;
-	private bool grounded = false;
+	private bool grounded = true;
 	private float groundRadius = 0.2f;
 
 	private Animator anim;
