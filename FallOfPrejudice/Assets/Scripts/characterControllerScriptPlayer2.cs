@@ -22,23 +22,25 @@ public class characterControllerScriptPlayer2 : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		anim.SetBool ("ground", grounded);
+				if (anim != null) {
+						grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+						anim.SetBool ("ground", grounded);
 
-		anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+						anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
-		// if not grounded, player can't be controlled
-		// if(!grounded) return;
+						// if not grounded, player can't be controlled
+						// if(!grounded) return;
 
-		float move = Input.GetAxis ("Horizontal2");
-		anim.SetFloat("speed", Mathf.Abs(move));
-		rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+						float move = Input.GetAxis ("Horizontal2");
+						anim.SetFloat ("speed", Mathf.Abs (move));
+						rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
 
-		if (move > 0 && !facingRight)
-						Flip ();
-				else if (move < 0 && facingRight)
-						Flip ();
-	}
+						if (move > 0 && !facingRight)
+								Flip ();
+						else if (move < 0 && facingRight)
+								Flip ();
+				}
+		}
 
 	void Update()
 	{
