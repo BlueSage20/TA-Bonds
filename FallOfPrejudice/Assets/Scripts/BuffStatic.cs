@@ -10,6 +10,7 @@ public class BuffStatic : MonoBehaviour {
 	void Start()
 	{
 		transform.renderer.enabled = false;
+		transform.collider2D.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -17,9 +18,11 @@ public class BuffStatic : MonoBehaviour {
 		if(Time.realtimeSinceStartup >= spawnTime)
 		{
 			transform.renderer.enabled = true;
+			transform.collider2D.enabled = true;
 			if(Time.realtimeSinceStartup >= despawnTime)
 			{
 				transform.renderer.enabled = false;
+				transform.collider2D.enabled = false;
 			}
 		}
 	}
