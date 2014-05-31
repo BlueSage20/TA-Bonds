@@ -7,6 +7,8 @@ public class BuffStatic : MonoBehaviour {
 	public float despawnTime;
 	public float healthGain;
 
+	public AudioClip clip;
+
 	void Start()
 	{
 		transform.renderer.enabled = false;
@@ -30,6 +32,7 @@ public class BuffStatic : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player") {
+			AudioSource.PlayClipAtPoint (clip, transform.position);
 			Destroy (gameObject);
 			col.gameObject.GetComponentInChildren<Bubble>().health += healthGain;
 		} else if (col.gameObject.tag == "Ground") {
