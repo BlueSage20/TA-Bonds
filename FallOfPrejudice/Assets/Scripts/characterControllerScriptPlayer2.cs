@@ -12,26 +12,26 @@ public class characterControllerScriptPlayer2 : MonoBehaviour {
 	private bool grounded = true;
 	private float groundRadius = 0.2f;
 
-	private Animator anim;
+	//private Animator anim;
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponentInChildren<Animator>();
+		//anim = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		anim.SetBool ("ground", grounded);
+		//anim.SetBool ("ground", grounded);
 
-		anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+		//anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
 		// if not grounded, player can't be controlled
 		// if(!grounded) return;
 
 		float move = Input.GetAxis ("Horizontal2");
-		anim.SetFloat("speed", Mathf.Abs(move));
+		//anim.SetFloat("speed", Mathf.Abs(move));
 		rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
 
 		if (move > 0 && !facingRight)
@@ -44,7 +44,7 @@ public class characterControllerScriptPlayer2 : MonoBehaviour {
 	{
 		if((grounded) && Input.GetKeyDown(KeyCode.UpArrow))
 		{
-			anim.SetBool("ground", false);
+			//anim.SetBool("ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
 		}
 	}
