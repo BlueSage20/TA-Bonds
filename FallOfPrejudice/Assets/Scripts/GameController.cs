@@ -36,9 +36,9 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void FixedUpdate()
-	{			time += 0.05f;	
+	{	
 		if (!gameOver && !win) {
-	
+			time += 0.05f;	
 		}
 		if (restart) 
 		{
