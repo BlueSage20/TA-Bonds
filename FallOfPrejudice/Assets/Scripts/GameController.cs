@@ -15,9 +15,7 @@ public class GameController : MonoBehaviour {
 	
 	private bool gameOver;
 	private bool restart;
-
-	public AudioClip clip;
-
+	
 	void Start ()
 	{
 		gameOver = false;
@@ -40,9 +38,6 @@ public class GameController : MonoBehaviour {
 		{
 			restartText.text = "Press 'R' to Restart";
 			restart = true;
-		}
-		if (Input.GetKey(KeyCode.Escape)) {
-			Application.Quit ();		
 		}
 	}
 	
@@ -71,8 +66,6 @@ public class GameController : MonoBehaviour {
 	
 	public void GameOver ()
 	{
-		GameObject.Find("Main Camera").audio.Stop();
-		AudioSource.PlayClipAtPoint(clip,transform.position);
 		gameOverText.text = "Game Over!";
 		gameOver = true;
 	}

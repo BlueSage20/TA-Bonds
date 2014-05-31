@@ -14,8 +14,6 @@ public class Bubble : MonoBehaviour {
 
 	public GameController gameController;
 
-	public AudioClip clip;
-
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,14 +24,20 @@ public class Bubble : MonoBehaviour {
 						}
 						if (distanceBetweenPlayers <= 5) {
 								health += recover;	
-								health = player.GetComponentInChildren<Bubble>().health + target.GetComponentInChildren<Bubble>().health;
 						}
 						if (health <= 0 && gameObject != null) {
 								Destroy (player);
 								gameController.GameOver ();
 						}
 						light.spotAngle = health / 2 + 50f;
-						AudioSource.PlayClipAtPoint(clip,transform.position);
 				}
 		}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Obstacle") {
+			health -= 20;		
+		}
+						
+	}
 }
