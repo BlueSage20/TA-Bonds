@@ -47,17 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bubble.cs" />
-     <Compile Include="Assets\Scripts\Buff.cs" />
+     <Compile Include="Assets\Scripts\BuffMoving.cs" />
+     <Compile Include="Assets\Scripts\BuffStatic.cs" />
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
-     <Compile Include="Assets\Scripts\GUITest.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Platform.cs" />
-     <Compile Include="Assets\Scripts\PlayerController1.cs" />
-     <Compile Include="Assets\Scripts\PlayerController1_alternative.cs" />
-     <Compile Include="Assets\Scripts\PlayerController2.cs" />
-     <Compile Include="Assets\Scripts\PlayerController2_alternative.cs" />
      <Compile Include="Assets\Scripts\characterControllerScript.cs" />
      <Compile Include="Assets\Scripts\characterControllerScriptPlayer2.cs" />
      <None Include="Assets\Sounds for the Game\description_of_sounds.txt" />
