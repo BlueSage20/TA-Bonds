@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour {
 			Application.Quit ();		
 		}
 	if (Input.GetKey (KeyCode.Space)) {
-			Application.LoadLevel("Level1");
+			Application.LoadLevel("Level");
 		}
 	}
 }
