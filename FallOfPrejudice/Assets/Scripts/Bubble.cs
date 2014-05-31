@@ -32,12 +32,4 @@ public class Bubble : MonoBehaviour {
 						light.spotAngle = health / 2 + 50f;
 				}
 		}
-
-	void OnCollisionEnter2D(Collision2D col)
-	{
-		if (col.gameObject.tag == "Obstacle") {
-			health -= 20;		
-		}
-						
-	}
 }
